@@ -1,0 +1,1 @@
+{"version":3,"sources":["../index.js"],"names":["attatchToTangle"],"mappings":"aACA,8E,yJADA;AAGA;aACe,CACXA,eAAe,CAAfA,2BADW,C","sourcesContent":["//Import all the modules for computing\nimport attatchToTangle from \"./src/attatchToTangle\";\n\n//Export all the public modules added to the Methods in README.md\nexport default {\n    attatchToTangle,\n};"],"file":"index.js"}

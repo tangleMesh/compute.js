@@ -1,0 +1,43 @@
+{
+  "name": "@tanglemesh/compute.js",
+  "version": "1.0.0",
+  "description": "A simple package to do computing tasks for publishing to the tangle (eg. attatchToTangle)",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "build": "babel index.js --out-dir dist --source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tangleMesh/compute.js.git"
+  },
+  "keywords": [
+    "IOTA",
+    "tangle",
+    "iotatoken",
+    "attatchToTangle",
+    "pow",
+    "compute"
+  ],
+  "author": "tangleMesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tangleMesh/compute.js/issues"
+  },
+  "homepage": "https://github.com/tangleMesh/compute.js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "babel-preset-minify": "^0.5.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "axios": "^0.19.0",
+    "jsonwebtoken": "^8.5.1"
+  }
+}
