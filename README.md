@@ -12,17 +12,22 @@ This is an npm-package and you can add it to your project by using npm with:
 
 ## Usage
 
-    const Compute = require ('@tangleMesh/compute.js');
+    import Compute from '@tanglemesh/compute.js';
+    import { ApiAuthentificator } from "@tanglemesh/api-client.js";
+    import { composeAPI } from "@iota/core";
+
+    //Set credentials for using the tangleMesh:api
+    const apiIdentifier = "api-identifier",
+          apiSecret = "api-secret";
+    const apiAuth = new ApiAuthentificator (apiIdentifier, apiSecret);
+
+    //Create the `compute` object for doing computation tasks
+    const compute = new Compute (apiAuth);
 
     // Initialize the iota compose api and use our compute-method(s)
-    const { composeAPI } = require ('@iota/core');
     const iota = composeAPI ({
         provider: 'https://nodes.thetangle.org:443',
-        compute: compute.attatchToTangle (
-            "api-identifier",
-            "api-secret",
-            "channel-id",
-        ),
+        compute: compute.attatchToTangle ("channel-id"),
     });
 
 
@@ -34,16 +39,17 @@ In order to authorize your requests, you need to create an API key and secret at
 ### attatchToTangle
 This method can be used to overwrite the default `attatchToTangle` method from the [iotaledger](https://github.com/iotaledger/) packages.
 
-    compute.attatchToTangle (
-        apiIdentifier,
-        apiSecret,
-        channelId,
-    )
+    compute.attatchToTangle (channelId)
 
 **Parameters:**
-- apiIdentifier `string` - the generated api identifier from tangleMesh
-- apiSecret `string` - the generated api secret from tangleMesh
 - channelId `string` - the channel id you want to pay your request with (the costs per request will be listed on [our website](https://tangle-mesh.io))
+
+## Examples
+For more examples just have a look on the [/examples](/examples) directory.
+
+Run an example with the command:
+
+    node examples/send-transaction.example.js
 
 ## Contact / Support
 For requests or questions simply create an issue on [our repository](https://github.com/tangleMesh/compute.js) or [contact us](https://tangle-mesh.io/contact) with our form.

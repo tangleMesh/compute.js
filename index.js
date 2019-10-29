@@ -1,7 +1,5 @@
 //Import all the modules for computing
-import attatchToTangle from "./src/attatchToTangle";
+const Compute = require ("./src/compute");
 
 //Export all the public modules added to the Methods in README.md
-export default {
-    attatchToTangle,
-};
+module.exports = Compute;
