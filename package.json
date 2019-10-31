@@ -1,6 +1,6 @@
 {
   "name": "@tanglemesh/compute.js",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simple package to do computing tasks for publishing to the tangle (eg. attatchToTangle)",
   "main": "index.js",
   "directories": {
