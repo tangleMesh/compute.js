@@ -30,6 +30,6 @@
   "homepage": "https://tangle-mesh.io",
   "dependencies": {
     "@iota/core": "^1.0.0-beta.21",
-    "@tanglemesh/api-client.js": "^1.0.4"
+    "@tanglemesh/api-client.js": "^1.0.5"
   }
 }
